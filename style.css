@@ -1,0 +1,15 @@
+body {
+  padding-left: 5px;
+}
+
+.inputs input,
+.inputs label,
+.inputs select {
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+#calculate {
+  margin-top: 10px;
+  font-size: large;
+}

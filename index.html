@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True Curve Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>
+      Input the measurement from your electronic comparator and calculate
+      real-time corrections for your lens based on their index.
+    </h1>
+    <div class="inputs">
+      <label for="measurement">Measurement</label>
+      <input type="number" name="measurement" placeholder="0.00" />
+      <label for="base-index">Base index</label>
+      <select name="indices" id="base-index">
+        <option value="1.5">1.5</option>
+        <option value="1.56">1.56</option>
+        <option value="1.6">1.6</option>
+        <option value="1.67">1.67</option>
+        <option value="1.74">1.74</option>
+      </select>
+      <label for="diopter">Diopter</label>
+      <input type="number" id="diopter" placeholder="+/- 1.00">
+      <input type="button" id="calculate" value="Calculate" onclick="calculate();">
+    </div>
+    <p id="result"></p>
+    <script>
+        //placeholder for business logic
+        let i = 0;
+        function calculate() {
+            const randomText = ['some result', 'other result', 'get your true curves here!']; 
+            const result = document.getElementById('result');
+            result.textContent = randomText[i];
+            i++
+            if (i == 3) {
+                i = 0;
+            }
+        }
+    </script>
+  </body>
+</html>
