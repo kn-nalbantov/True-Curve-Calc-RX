@@ -12,7 +12,7 @@
       real-time corrections for your lens based on their index.
     </h1>
     <div class="inputs">
-      <label for="measurement">Measurement</label>
+      <label for="measurement">Measurement<i class="bi bi-question-circle" onmouseover="showInfo()" onmouseout="hideInfo()"></i><span class="more-info" style="display: none; color:gray">more info</span></label>
       <input type="number" name="measurement" placeholder="0.00" />
       <label for="base-index">Base index</label>
       <select name="indices" id="base-index">
@@ -22,7 +22,7 @@
         <option value="1.67">1.67</option>
         <option value="1.74">1.74</option>
       </select>
-      <label for="diopter">Diopter</label>
+      <label for="diopter">Diopter correction<i class="bi bi-question-circle"></i></label>
       <input type="number" id="diopter" placeholder="+/- 1.00">
       <input type="button" id="calculate" value="Calculate" onclick="calculate();">
     </div>
@@ -38,6 +38,16 @@
             if (i == 3) {
                 i = 0;
             }
+        }
+
+        function showInfo() {
+            const moreInfo = document.querySelector('.more-info');
+            moreInfo.style.display = 'block';
+        }
+
+        function hideInfo() {
+            const moreInfo = document.querySelector('.more-info');
+            moreInfo.style.display = 'none';
         }
     </script>
   </body>
