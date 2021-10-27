@@ -1,5 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding-left: 5px;
 }
@@ -23,4 +27,22 @@ i {
 span {
   display: none;
   color: rgb(138, 138, 138);
+}
+
+footer {
+  display: table;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  padding-top: 15px;
+  margin-right: 10px;
+}
+
+.green {
+  color: rgb(23, 131, 23);
+  text-decoration: underline;
 }

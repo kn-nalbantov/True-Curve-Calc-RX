@@ -7,28 +7,38 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>
-      Input the measurement from your electronic comparator and calculate
-      real-time corrections for your lens based on their index.
-    </h1>
-    <div class="inputs">
-      <label for="measurement">Measurement<i class="bi bi-question-circle" onmouseover="showInfo()" onmouseout="hideInfo()"></i>
-        <span class="more-info" style="display: none; color:gray">more info</span>
-      </label>
-      <input type="number" id="measurement" placeholder="0.00" />
-      <label for="base-index">Base index</label>
-      <select name="indices" id="base-index">
-        <option value="1.5">1.5</option>
-        <option value="1.56">1.56</option>
-        <option value="1.6">1.6</option>
-        <option value="1.67">1.67</option>
-        <option value="1.74">1.74</option>
-      </select>
-      <label for="diopter">Diopter correction<i class="bi bi-question-circle"></i></label>
-      <input type="number" id="diopter" placeholder="+/- 1.00">
-      <input type="button" id="calculate" value="calculate" onclick="calculate();">
-    </div>
-    <p id="result"></p>
+    <main>
+      <h1>
+        Calculate the true curve of your blank
+      </h1>
+      <div class="inputs">
+        <label for="measurement">Measurement<i class="bi bi-question-circle" onmouseover="showInfo()" onmouseout="hideInfo()"></i>
+          <span class="more-info" style="display: none; color:gray">measure the blank with your digital comparator</span>
+        </label>
+        <input type="number" id="measurement" placeholder="0.00" />
+        <label for="base-index">Base index</label>
+        <select name="indices" id="base-index">
+          <option value="1.5">1.5</option>
+          <option value="1.56">1.56</option>
+          <option value="1.6">1.6</option>
+          <option value="1.67">1.67</option>
+          <option value="1.74">1.74</option>
+        </select>
+        <label for="diopter">Diopter correction<i class="bi bi-question-circle"></i></label>
+        <input type="number" id="diopter" placeholder="+/- 1.00">
+        <input type="button" id="calculate" value="calculate" onclick="calculate();">
+      </div>
+      <p id="result">0.000</p>
+    </main>
+    <footer>
+      <aside class="column left">Created by:</aside>
+      <section class="column">
+        <p class="green">Konstantin Nalbantov</p>
+        <p class="green">⚖️ MIT License</p>
+        <a class="green" href="https://github.com/kn-nalbantov/True-Curve-Calc-RX"><p>DOCS</p></a>
+      </div>
+      </section>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
