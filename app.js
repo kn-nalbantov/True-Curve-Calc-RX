@@ -1,8 +1,10 @@
 const result = document.getElementById('result');
 const measurement = document.getElementById('measurement');
 const index = document.getElementById('base-index');
+document.querySelector('form').addEventListener('click', calculate);
 
-function calculate() {
+function calculate(e) {
+  e.preventDefault();
   const coeficients = {
     1.5: 0.024217,
     1.56: 0.02717696,
